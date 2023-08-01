@@ -1,0 +1,266 @@
+:root {
+    --Bright-green: #54E6AF;
+    --dark-grey: #2C344B;
+    --very-dark-blue: #121725;
+    --white: #FFFFFF;
+    --medium-grey: #5A668A;
+    --light-grey: #C2CBE5;
+    --red: #FB3E3E;
+    --bright-green-hover: #BDF2DE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    padding-top: 8%;
+    padding-left: 10%;
+    font-family: "Chivo", sans-serif;
+}
+
+#host {
+    position: absolute;
+    right: 0px;
+    z-index: -1;
+}
+
+#host-tablet {
+    display: none;
+}
+
+#dots {
+    position: absolute;
+    right: 0;
+    top: 75%;
+}
+
+#logo {
+    margin-bottom: 50px;
+}
+
+#main-container {
+    background-color: inherit;
+    width: 800px;
+    padding-top: 100px;
+    height: 700px;
+}
+
+.header {
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 3.8rem;
+}
+
+#header-first-line {
+    color: var(--Bright-green);
+}
+
+#header-second-line {
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+#description {
+    color: var(--medium-grey);
+    width: 55%;
+    font-weight:200;
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: var(--dark-grey);
+    width: 50%;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+
+#email-input {
+    color: var(--light-grey);
+    background-color: inherit;
+    border-width: 0;
+    font-family: "Chivo", sans-serif;
+}
+
+#email-input:focus {
+    outline: none;
+}
+
+#submit {
+    background-color: var(--Bright-green);
+    border-width: 0;
+    font-family: "Chivo", sans-serif;
+    font-weight: 500;
+    height: 40px;
+    border-radius: 20px;
+    width: 125px;
+    margin-right: -30px;
+}
+
+#submit:hover {
+    background-color: var(--bright-green-hover);
+    cursor: pointer;
+}
+
+.message {
+    font-size: 0.85rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#empty-message {
+    color: var(--red);
+}
+
+#error-message {
+    color: var(--red);
+}
+
+#success-message {
+    color: var(--Bright-green);
+}
+
+#logo-set {
+    margin-top: 70px;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        padding-left: 3%;
+    }
+   
+    #host {
+        display: none;
+    }
+    
+    #host-tablet {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    #dots {
+        left: 3%;
+        top: 87%;
+    }
+
+    #logo {
+        margin-bottom: 20%;
+    }
+
+    #main-container {
+        width: 550px;
+    }
+
+    .header {
+        font-size: 2.5rem;
+    }
+
+    #description {
+        width: 72%;
+    }
+
+    form {
+        width: 72%;
+    }
+
+    #logo-set {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    #host-tablet {
+        display: none;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image:url("/pod-request-access-landing-page/starter-code/assets/mobile/image-host.jpg");
+        box-shadow: inset 0 0 0 1000px rgba(18,23,37,0.8);
+        padding-top: 25%;
+        padding-right: 3%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    #logo {
+        margin-bottom: 15%;
+        order: 0;
+    }
+
+    #dots {
+        display: none;
+    }
+
+    #main-container {
+        width: 100%;
+        padding-top: 0;
+        background-color: transparent;
+    }
+
+    .header {
+        font-size: 1.35rem;
+        text-align: center;
+    }
+
+    #description {
+        text-align: center;
+        width: 100%;
+        color: var(--light-grey);
+    }
+
+    form {
+        flex-direction: column;
+        background-color: transparent;
+        width: 100%;
+        height: 120px;
+    }
+
+    #email-input {
+        background-color: var(--dark-grey);
+        width: 100%;
+        height: 50px;
+        border-radius: 30px;
+        padding-left: 15px;
+    }
+
+    #submit {
+        margin-right: 0;
+        width: 100%;
+        border-radius: 30px;
+        height: 50px;
+    }
+
+    #logo-set {
+        width: 100%;
+    }
+
+    .logo {
+        width: 56px;
+    }
+
+    
+}
